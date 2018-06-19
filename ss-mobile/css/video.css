@@ -54,21 +54,17 @@
     padding-top: 10px;
     font-size: 23px;
     color: #9b9b9b;
-
+    position: absolute;
+    right: 57px;
 }
-.close-btn {
-    display: none;
-    padding-top: 7px;
-    font-size: 30px;
-    color: #ed1c24;
-    margin-right: 16px;
-    margin-left: 17px;
+.menu-btn.active {
+    right: 12px;
 }
 .menu-btn {
 	display: inline-block;
     padding-top: 13px;
-    margin-right: 10px;
-    margin-left: 20px;
+    position: absolute;
+    right: 10px;
 }
 .wrapper-body {
 	background: #333333;

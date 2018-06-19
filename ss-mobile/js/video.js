@@ -1,16 +1,15 @@
 function openNav() {
 	document.getElementById("menu-video").style.width = "200px";
 	document.getElementById("full-screen").style.width = "100%";
-	document.getElementById("menu-btn").style.display = "none";
-	document.getElementById("close-btn").style.display = "inline-block";
-
+	document.getElementById("img-nav-menu").src = "images/video/close_ico.svg";
+	document.getElementById("menu-btn").classList.add("active");
 }
 
 function closeNav() {
 	document.getElementById("menu-video").style.width = "0";
 	document.getElementById("full-screen").style.width = "0";
-	document.getElementById("menu-btn").style.display = "inline-block";
-	document.getElementById("close-btn").style.display = "none";
+	document.getElementById("img-nav-menu").src = "images/video/list_ico.svg";
+	document.getElementById("menu-btn").classList.remove("active");
 }
 
 function openSearch () {
