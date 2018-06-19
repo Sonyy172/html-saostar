@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="20px" viewBox="0 0 27 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>list_ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="m-video-sub" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-338.000000, -13.000000)">
+        <g id="header" fill="#9B9B9B">
+            <g id="list_ico" transform="translate(338.000000, 13.000000)">
+                <g id="-">
+                    <polygon id="Path" points="23.203125 8.48484848 23.203125 0 20.671875 0 20.671875 8.48484848 16.875 8.48484848 21.9375 13.3333333 27 8.48484848"></polygon>
+                    <g id="sort-copy" transform="translate(13.500000, 10.000000) scale(1, -1) translate(-13.500000, -10.000000) ">
+                        <path d="M0,20 L10.125,20 L10.125,16.6666667 L0,16.6666667 L0,20 L0,20 Z M0,0 L0,3.33333333 L27,3.33333333 L27,0 L0,0 L0,0 Z M0,11.6666667 L14.625,11.6666667 L14.625,8.33333333 L0,8.33333333 L0,11.6666667 L0,11.6666667 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

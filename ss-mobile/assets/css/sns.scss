@@ -1,0 +1,580 @@
+@import "reset";
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img, video, iframe {
+  vertical-align: middle;
+}
+.ss_bzone_middle {
+  margin: 30px auto;
+  width: 300px;
+  height: 250px;
+  background: url(../images/bg-ads.png) #fff ;
+}
+
+.sns-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background: url('../images/sns-header-bg.jpg') no-repeat top center;
+  background-color: #F2F3F5;
+  background-size: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .sw-header {
+    height: 60px;
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+
+    .swh-logo {
+      display: block;
+      width: 177px;
+      line-height: 60px;
+      margin: 0 auto;
+    }
+    
+    .swh-back {
+      font-size: 20px;
+      color: #fff;
+      position: absolute;
+      top: 22px;
+      left: 10px;
+    }
+
+    .swh-share {
+      font-size: 12px;
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      display: block;
+      width: 41px;
+      height: 24px;
+      line-height: 23px;
+      border-radius: 12px;
+      border: solid 1px #fff;
+    }
+  }
+
+  .sw-main {
+    .swm-top {
+      padding-bottom:  10px;
+      -webkit-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      -moz-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      
+      .swmt-thumb {
+        .swmtt-item {
+          display: block;
+          width: calc(100% * 2 / 3);
+          border-radius: 4px;
+          overflow: hidden;
+          -webkit-box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2);
+          -moz-box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2);
+          box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2);
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .swmt-info {
+        padding: 10px 0;
+
+        .swmti-item {
+          padding: 0 20px;
+          text-align: center;
+
+          .swmtii-date {
+            font-family: 'Geomanist-Medium';
+            font-size: 20px;
+            color: #FF666C;
+            display: block;
+
+            .swmtiid-day {
+              font-family: 'Geomanist-Bold';
+              font-size: 24px;
+            }
+          }
+
+          .swmtii-title {
+            display: block;
+            font-family: 'Geomanist-Medium';
+            font-size: 20px;
+            line-height: 25px;
+            color: #333;
+            margin-top: 10px;
+          }
+
+          .swmtii-time {
+            display: block;
+            font-family: 'Geomanist-Book';
+            font-size: 10px;
+            color: #9b9b9b;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .swmt-nav {
+        width: 140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .swmtn-pagination {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+          }
+
+          .swiper-pagination-bullet-active {
+            background-color: #FF666C;
+          }
+        }
+
+        .swmtn-next, .swmtn-prev {
+          color: #9b9b9b;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+
+    .sw-calendar {
+      padding: 15px 10px;
+      background: url('../images/sns-calendar-bg.jpg') no-repeat top center;
+      background-size: cover;
+
+      .swc-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .swch-left {
+          font-family: 'Geomanist-Medium';
+          font-size: 16px;
+          color: #fff;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 21px;
+            height: 25px;
+            background: url('../images/cake.svg') no-repeat center;
+            background-size: 100%;
+            margin-right: 5px;
+          }
+        }
+
+        .swch-right {
+          display: block;
+          width: 24px;
+          height: 30px;
+          background: url('../images/calendar.svg') no-repeat center 100%;
+
+          .swchr-date {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: relative;
+
+            .swchr-date::-webkit-calendar-picker-indicator {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: auto;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .swc-main {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .swcm-item {
+          width: calc((100% - 20px)/3);
+          background-color: #fff;
+          border-radius: 4px;
+          border: solid 1px #ededed;
+          position: relative;
+          margin-bottom: 10px;
+          overflow: hidden;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+          }
+
+          &:hover {
+            .swcmi-hover {
+              display: block;
+            }
+          }
+
+          .swcmi-hover {
+            font-family: 'Geomanist-Medium';
+            font-size: 12px;
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+
+            &::before {
+              content: '';
+              display: block;
+              width: 39px;
+              height: 40px;
+              background: url('../images/wishing.svg') no-repeat center;
+              background-size: 100%;
+              margin: 0 auto;
+              margin-top: 25%;
+            }
+          }
+
+          .swcmi-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - 20px);
+            margin: 0 10px;
+            height: 100%;
+
+            .swcmii-date {
+              display: block;
+              font-family: 'Geomanist-Book';
+              font-size: 20px;
+              margin-top: 10px;
+            }
+
+            .swcmii-celeb {
+              margin-top: -5px;
+
+              .swcmiic-item {
+                //-webkit-box-sizing: content-box;
+                //-moz-box-sizing: content-box;
+                //box-sizing: content-box;
+                display: inline-block;
+                border-radius: 50%;
+                overflow: hidden;
+                border: solid 1px #fff;
+                margin-right: -5px;
+
+                //&:nth-child(1) {
+                //  margin-right: 0;
+                //}
+
+                .swcmiici-img {
+                  width: 100%;
+                }
+              }
+            }
+
+            .swcmii-bottom {
+              position: absolute;
+              bottom: 5px;
+              left: 0;
+              width: 100%;
+
+              .swcmiib-item {
+                color: #333;
+
+                .swcmiibi-title {
+                  font-family: 'Roboto-Regular';
+                  font-size: 14px;
+                  display: block;
+                }
+                .swcmiibi-name {
+                  font-family: 'Roboto-Bold';
+                  font-size: 14px;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sw-post {
+    padding: 0 10px;
+    padding-bottom: 1px;
+
+    .swp-item {
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      -moz-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+
+      &:nth-child(3n-1) {
+        .swp-heading {
+          background: url('../images/minicake.svg') no-repeat right 10px bottom;
+        }
+      }
+
+      &:nth-child(3n) {
+        .swp-heading {
+          background: url('../images/candles.svg') no-repeat right 10px bottom;
+        }
+      }
+
+      &:nth-child(3n+1) {
+        .swp-heading {
+          background: url('../images/002-star.svg') no-repeat right 10px bottom 10px;
+        }
+      }
+
+      .swp-heading {
+        .swph-left {
+          width: 60px;
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-right: solid 1px #d8d8d8;
+
+          .swphl-date {
+            font-family: 'Geomanist-Bold';
+            font-size: 28px;
+            line-height: 22px;
+            color: #FF666C;
+            display: block;
+          }
+
+          .swphl-month {
+            font-family: 'Geomanist-Medium';
+            font-size: 12px;
+          }
+        }
+
+        .swph-right {
+          width: calc(100% - 60px);
+          padding-top: 10px;
+          padding-left: 10px;
+
+          .swphr-title {
+            font-family: 'Geomanist-Book';
+            font-size: 20px;
+            line-height: 25px;
+          }
+
+          .swphr-name {
+            font-family: 'Geomanist-Bold';
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+      }
+
+      .swp-thumb {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .swp-info {
+        padding: 10px;
+
+        .swpi-title {
+          font-family: 'Geomanist-Medium';
+          font-size: 20px;
+          line-height: 25px;
+          color: #333;
+          display: block;
+        }
+
+        .swpi-time {
+          font-family: 'Geomanist-Book';
+          font-size: 10px;
+          display: block;
+          margin: 10px 0;
+          color: #9b9b9b;
+        }
+
+        .swpi-sapo {
+          font-family: 'Roboto-Regular';
+          font-size: 13px;
+          line-height: 18px;
+          color: #444;
+        }
+      }
+
+      .swp-interaction {
+        padding: 10px;
+        border-top: solid 1px #f2f3f5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .swpi-like {
+          font-family: 'Geomanist-Book';
+          font-size: 12px;
+          color: #9b9b9b;
+          display: block;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url('../images/sns-like.svg') no-repeat left center;
+            margin-right: 5px;
+          }
+        }
+
+        .swpi-share {
+          font-family: 'Geomanist-Book';
+          font-size: 12px;
+          line-height: 24px;
+          color: #9b9b9b;
+          padding: 0 15px;
+          border: solid 1px #9b9b9b;
+          border-radius: 12px;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url('../images/sns-share.svg') no-repeat left center;
+            margin-bottom: -1px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .swp-viewmore {
+      font-family: 'Roboto-Medium';
+      font-size: 14px;
+      line-height: 32px;
+      color: #fff;
+      display: block;
+      text-align: center;
+      border-radius: 4px;
+      background-color: #8E8E93;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  .sw-calendar-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    width: 100%;
+    height: 100vh;
+    display: none;
+
+    .swcp-bg {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .swcp-main {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      width: calc(100% - 20px);
+      background-color: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .swcp-list {
+        overflow: hidden;
+
+        .swcp-notice {
+          font-family: 'Geomanist-Regular';
+          font-size: 16px;
+          background-color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          color: #ED676B;
+        }
+
+        .swcpl-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #fff;
+          padding: 15px 15px;
+          border-bottom: solid 1px #e8e8e8;
+
+          &:last-child {
+            overflow: hidden;
+          }
+
+          .swcpli-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .swcpli-info {
+            width: calc(100% - 50px);
+
+            .swcpli-title {
+              font-family: 'Geomanist-Regular';
+              font-size: 14px;
+              color: #333;
+              display: block;
+            }
+
+            .swcpli-name {
+              font-family: 'Geomanist-Book';
+              font-size: 18px;
+              color: #333;
+              display: block;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

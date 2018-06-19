@@ -1,0 +1,431 @@
+@import "reset";
+
+$main-color: #ED1C24;
+$primary-color: #333;
+$button-hover-color: #FF666C;
+
+@mixin text($font-family, $font-size, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin detail() {
+  .xwmi-video {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  .xwmi-thumb {
+    display: block;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .xwmi-detail {
+    padding: 10px 10px;
+
+    .xwmid-title {
+      @include text('Geomanist-Medium', 20px, 25px, #333);
+      display: block;
+      margin: 10px 0;
+
+      .xwmidt-gallery {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/icon-gallery.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 3px;
+      }
+    }
+
+    .xwmid-info {
+      @include text('Geomanist-Book', 12px, normar, #9b9b9b);
+      display: flex;
+      justify-content: space-between;
+
+      .xwmidit-circle {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #C6C6C6;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
+
+      .xwmidiv-icon {
+        display: inline-block;
+        width: 13px;
+        height: 9px;
+        background-image: url('../images/xemlacuoi-view.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .xwmi-button {
+    border-top: solid 1px #F2F3F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    .xwmib {
+      display: block;
+      text-align: center;
+      border-radius: 12px;
+      border: solid 1px #9b9b9b;
+      @include text('Geomanist-Book', 12px, 24px, #9b9b9b);
+    }
+
+    .xwmib-comment {
+      width: 90px;
+
+      .xwmibc-ico {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-image: url('../images/ico-commnet.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+
+    .xwmib-like {
+      width: 70px;
+
+      .xwmibl-ico {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-image: url('../images/xemlacuoi-ico.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
+
+      &.active {
+        border: solid 1px #FFC200;
+
+        .xwmibl-ico {
+          background-image: url('../images/xemlacuoi-active-ico.svg');
+        }
+
+        .xwmibl-count {
+          color: #333;
+        }
+      }
+    }
+
+    .xwmib-share {
+      width: 80px;
+      position: relative;
+
+      .xwmibs-ico {
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: -1px;
+      }
+
+      &.active {
+        background-color: $button-hover-color;
+        border: solid 1px $button-hover-color;
+        color: #fff;
+      }
+
+      .xwmibs-list {
+        position: absolute;
+        bottom: calc(100% + 5px);
+        left: 0;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 100%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        display: none;
+        color: #9b9b9b;
+
+        .xwmibsl-item {
+          position: relative;
+          padding-left: 20px;
+          line-height: 30px;
+          border-bottom: solid 1px #e8e8e8;
+
+          i {
+            display: block;
+            width: 20px;
+            text-align: center;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img, video, iframe {
+  vertical-align: middle;
+}
+.ss_bzone_middle {
+  margin: 30px auto;
+  width: 300px;
+  height: 250px;
+  background: url(../images/bg-ads.png) #fff ;
+}
+
+.xemlacuoi-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #F2F3F5;
+  background-image: url('../images/xemlacuoi-header.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  .xw-header {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .xwh-back {
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      top: -2px;
+      display: block;
+    }
+
+    .xwh-logo {
+      img {
+        height: 30px;
+      }
+    }
+
+    .xwh-share {
+      display: block;
+      font-size: 14px;
+      color: #fff;
+      position: relative;
+      top: -4px;
+      padding: 5px 0;
+      width: 40px;
+      border-radius: 12px;
+      border: solid 1px #fff;
+      text-align: center;
+    }
+  }
+
+  .xw-description {
+    @include text('Geomanist-Book', 14px, 20px, #333);
+    padding: 5px 10px 0;
+  }
+
+  .xw-subscribe {
+    padding: 5px 10px 20px;
+
+    .xws-button {
+      @include text('Geomanist-Regular', 12px, 24px, #fff);
+      padding: 0 10px;
+      border-radius: 12px;
+      background-color: $main-color;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      i {
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: -1px;
+      }
+    }
+    .xws-count {
+      @include text('Roboto-Regular', 10px, 24px, #333);
+    }
+  }
+
+  .xw-main {
+    padding: 0 10px;
+    padding-bottom: 20px;
+
+    .xwm-item {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      @include detail();
+
+      .xwmi-viewmore {
+        display: block;
+        text-align: center;
+        @include text('Roboto-Medium', 14px, normal, #9b9b9b);
+        padding: 10px 0 5px;
+        border-top: solid 1px #e8e8e8;
+
+        .xwmic-ico {
+          display: block;
+          color: #E5BB36;
+          margin-top: -2px;
+        }
+      }
+    }
+
+    .xwm-heading {
+      @include text('Geomanist-Book', 20px, 24px, #696969);
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding-bottom: 5px;
+      border-bottom: solid 3px #d8d8d8;
+      margin-bottom: 20px;
+
+      .xwmh-item {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          background-color: transparent;
+        }
+
+        &.active {
+          @include text('Geomanist-Bold', 20px, 24px, #333);
+
+          &::after {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+
+    .xwm-viewmore {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      border-radius: 16px;
+      @include text('Roboto-Bold', 14px, 32px, #9b9b9b);
+      width: 175px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+#fancybox-wrap {
+  //padding: 0;
+}
+
+.xw-popup {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  display: none;
+  overflow: scroll;
+
+  @include detail();
+
+  .xwmi-sapo {
+    display: block;
+    @include text('Roboto-Bold', 16px, 22px, #333);
+    padding: 10px;
+  }
+
+  .xwmi-content {
+    background-color: #fff;
+    padding-bottom: 120px;
+
+    .xwmic-img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .xwp-bar {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    background-color: #fff;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    .xwmi-close {
+      display: block;
+      text-align: center;
+      @include text('Roboto-Medium', 14px, normal, #9b9b9b);
+      padding: 5px 0 10px;
+      border-top: solid 1px #e8e8e8;
+
+      i {
+        display: block;
+        color: #E5BB36;
+      }
+    }
+  }
+
+  .xwp-process {
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+
+    .xwpp-bar {
+      display: block;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #E5BB36;
+    }
+  }
+}

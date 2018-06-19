@@ -1,0 +1,23 @@
+.swb-topbanner {
+    padding: 15px 0;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.swbh-banner-1 {
+    padding: 20px 0;
+    text-align: center;
+}
+.sw-billboard {
+    padding: 15px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.swbhfr-banner1, .swbhfr-banner2, .swbhfr-banner3, .swbhwms-banner1, .swbhwms-banner2 {
+    margin-bottom: 15px;
+}
+.swbc-banner-1 {
+    clear: both;
+    padding: 15px;
+    text-align: center;
+}

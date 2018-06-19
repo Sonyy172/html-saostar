@@ -1,0 +1,421 @@
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+a {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+textarea {
+  resize: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.mr-0 {
+  margin-right: 0 !important; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.ml-0 {
+  margin-left: 0 !important; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
+.mt-0 {
+  margin-top: 0 !important; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mb-0 {
+  margin-bottom: 0 !important; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img, video, iframe {
+  vertical-align: middle; }
+
+.ss_bzone_middle {
+  margin: 30px auto;
+  width: 300px;
+  height: 250px;
+  background: url(../images/bg-ads.png) #fff; }
+
+.focus-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #333; }
+  .focus-wrapper .fw-header {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1003; }
+    .focus-wrapper .fw-header > a {
+      width: 100%;
+      color: #333; }
+      .focus-wrapper .fw-header > a.fwh-back {
+        font-size: 20px; }
+      .focus-wrapper .fw-header > a.fwh-logo {
+        text-align: center; }
+        .focus-wrapper .fw-header > a.fwh-logo img {
+          height: 32px; }
+      .focus-wrapper .fw-header > a.fwh-share {
+        text-align: right; }
+      .focus-wrapper .fw-header > a.fwh-share i {
+        display: inline-block;
+        font-size: 12px;
+        height: 24px;
+        width: 41px;
+        border-radius: 12px;
+        border: solid 1px #333;
+        text-align: center;
+        line-height: 22px; }
+  .focus-wrapper .fw-main {
+    padding-top: 55px;
+    padding-bottom: 1px; }
+    .focus-wrapper .fw-main .fwm-section {
+      margin-top: 40px; }
+      .focus-wrapper .fw-main .fwm-section .fwms-heading {
+        font-family: 'Geomanist-Medium';
+        color: #fff;
+        padding-bottom: 3px;
+        border-bottom: solid 3px #d8d8d8;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        font-size: 20px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-heading .fwmsh-text {
+          display: inline-block;
+          position: relative; }
+          .focus-wrapper .fw-main .fwm-section .fwms-heading .fwmsh-text::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: #ED1C24;
+            position: absolute;
+            bottom: -6px;
+            left: 0; }
+          .focus-wrapper .fw-main .fwm-section .fwms-heading .fwmsh-text > i {
+            color: #ED1C24;
+            margin-right: 5px; }
+      .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item {
+        background-color: #fff;
+        width: 68%;
+        border-radius: 4px;
+        overflow: hidden; }
+        .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsni-thumb {
+          display: block;
+          width: 100%;
+          padding-bottom: 159.6078431373%;
+          position: relative;
+          overflow: hidden; }
+          .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsni-thumb img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 100%; }
+        .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsi-info {
+          font-family: 'Geomanist-Book';
+          color: #9b9b9b;
+          font-size: 12px;
+          height: 25px;
+          line-height: 30px;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 10px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsi-info .p-like {
+            margin-right: 10px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsi-info .pl-icon {
+            display: inline-block;
+            width: 13px;
+            height: 11px;
+            background: url("../images/focus-like.svg") no-repeat center center;
+            background-size: cover;
+            position: relative;
+            top: 1px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item .fwmsi-info .ps-icon {
+            display: inline-block;
+            width: 10px;
+            height: 11px;
+            background: url("../images/focus-slide.svg") no-repeat center center;
+            background-size: cover;
+            position: relative;
+            top: 1px; }
+      .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 20px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .swiper-pagination-bullet {
+          background-color: #9b9b9b;
+          opacity: 1;
+          margin: 0 5px;
+          width: 10px;
+          height: 10px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .swiper-pagination-bullet-active {
+          background-color: #ED1C24; }
+        .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .fwmsn-next, .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .fwmsn-prev, .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .fwmsh-next, .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-nav .fwmsh-prev {
+          color: #9b9b9b;
+          margin-top: -1px; }
+      .focus-wrapper .fw-main .fwm-section .fwms-hot {
+        padding-left: 10px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item {
+          background-color: #fff;
+          width: 60%;
+          border-radius: 4px;
+          overflow: hidden; }
+          .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmshi-thumb {
+            display: block;
+            width: 100%;
+            padding-bottom: 159.6078431373%;
+            position: relative;
+            overflow: hidden; }
+            .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmshi-thumb img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              width: 100%; }
+          .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmsi-info {
+            font-family: 'Geomanist-Book';
+            color: #9b9b9b;
+            font-size: 12px;
+            height: 25px;
+            line-height: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px; }
+            .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmsi-info .p-like {
+              margin-right: 0; }
+            .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmsi-info .pl-icon {
+              display: inline-block;
+              width: 13px;
+              height: 11px;
+              background: url("../images/focus-like.svg") no-repeat center center;
+              background-size: cover;
+              position: relative;
+              top: 1px; }
+            .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item .fwmsi-info .ps-icon {
+              display: inline-block;
+              width: 10px;
+              height: 11px;
+              background: url("../images/focus-slide.svg") no-repeat center center;
+              background-size: cover;
+              position: relative;
+              top: 1px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav {
+          display: flex;
+          justify-content: space-around;
+          width: 150px;
+          margin: 0 auto;
+          margin-top: 20px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .swiper-pagination-bullet {
+            background-color: #9b9b9b;
+            opacity: 1;
+            margin: 0 5px;
+            width: 10px;
+            height: 10px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .swiper-pagination-bullet-active {
+            background-color: #ED1C24; }
+          .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .fwmsn-next, .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .fwmsn-prev, .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .fwmsh-next, .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-nav .fwmsh-prev {
+            color: #9b9b9b;
+            margin-top: -1px; }
+      .focus-wrapper .fw-main .fwm-section .fwms-old {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item {
+          background-color: #fff;
+          width: calc((100% - 20px) / 2);
+          border-radius: 4px;
+          overflow: hidden;
+          margin-bottom: 20px; }
+          .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsoi-thumb {
+            display: block;
+            width: 100%;
+            padding-bottom: 159.6078431373%;
+            position: relative;
+            overflow: hidden; }
+            .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsoi-thumb img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              width: 100%; }
+          .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsi-info {
+            font-family: 'Geomanist-Book';
+            color: #9b9b9b;
+            font-size: 10px;
+            height: 25px;
+            line-height: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px; }
+            .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsi-info .p-like {
+              margin-right: 0; }
+            .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsi-info .pl-icon {
+              display: inline-block;
+              width: 11px;
+              height: 10px;
+              background: url("../images/focus-like.svg") no-repeat center center;
+              background-size: cover;
+              position: relative;
+              top: 1px; }
+            .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item .fwmsi-info .ps-icon {
+              display: inline-block;
+              width: 10px;
+              height: 11px;
+              background: url("../images/focus-slide.svg") no-repeat center center;
+              background-size: cover;
+              position: relative;
+              top: 1px; }
+        .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-viewmore {
+          display: block;
+          width: 100%;
+          background-color: #8E8E93;
+          border-radius: 4px;
+          font-family: 'Roboto-Medium';
+          font-size: 14px;
+          text-align: center;
+          height: 32px;
+          line-height: 32px;
+          color: #fff; }
+          .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-viewmore i {
+            margin-right: 5px; }
+
+@media screen and (min-width: 500px) {
+  .focus-wrapper .fw-main .fwm-section .fwms-new .fwmsn-item {
+    width: 58%; }
+  .focus-wrapper .fw-main .fwm-section .fwms-hot .fwmsh-item {
+    width: 50%; }
+  .focus-wrapper .fw-main .fwm-section .fwms-old .fwmso-item {
+    width: calc((100% - 40px) / 3); } }
+
+/*# sourceMappingURL=focus.css.map */

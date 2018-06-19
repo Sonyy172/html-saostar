@@ -1,0 +1,86 @@
+.sw-xemlacuoi {
+  margin-top: 15px;
+
+  .swx-heading {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-image: linear-gradient(to right, #B07E0F, #ECC042);
+
+    .viewmore {
+      margin-top: 12px;
+    }
+  }
+
+  .swx-wrapper {
+    padding: 20px;
+    background-color: #f2f3f5;
+    display: flex;
+    justify-content: space-between;
+
+    .swxw-left {
+      width: 550px;
+
+      .swxwl-video {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .swxwl-title {
+        @include title(600, 20px, 25px);
+        margin-top: 10px;
+      }
+
+      .swxwl-info {
+        margin-top: 10px;
+      }
+    }
+
+    .swxw-right {
+      width: 380px;
+      padding-right: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      //&::-webkit-scrollbar {
+      //  width: 5px;
+      //}
+      //
+      //&::-webkit-scrollbar-track {
+      //  background-color: #e8e8e8;
+      //  border-radius: 2px;
+      //}
+      //
+      //&::-webkit-scrollbar-thumb {
+      //  background-color: #c6c6c6;
+      //  border-radius: 2px;
+      //}
+
+      .swxwr-item {
+        width: 170px;
+        margin-bottom: 20px;
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+        .swxwri-thumb {
+          @include thumbnail(100%);
+        }
+
+        .swxwri-title {
+          @include title(600, 14px, 18px);
+          margin-top: 10px;
+        }
+
+        .view {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

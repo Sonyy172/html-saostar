@@ -1,0 +1,284 @@
+.sw-header {
+  .sw-top {
+    background-color: #444;
+    font-weight: 600;
+    font-size: 14px;
+
+    .swt-list {
+        font-size: 0;
+
+      .swtl-item {
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+
+        a {
+          color: #fff;
+          display: block;
+          padding: 0 15px;
+          border-left: solid 1px #d6d6d6;
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $transparent;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+          }
+
+          &:hover {
+            &::after {
+              background-color: $main-color;
+            }
+          }
+        }
+
+        &:last-child {
+          a {
+            border-right: solid 1px #d6d6d6;
+          }
+        }
+      }
+    }
+
+    .swt-search {
+      padding: 5px 0;
+      position: relative;
+
+      .swts-input {
+        width: 220px;
+        height: 25px;
+        border-radius: 12px;
+        border: none;
+        background-color: #fff;
+        padding: 0 30px 0 10px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .swts-submit {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: url('../images/ico-search.svg') no-repeat center center;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .sw-middle {
+    text-align: center;
+    padding: 30px 0;
+
+    .swm-logo {
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      @include child_image();
+    }
+
+    .vwm-datecount {
+      letter-spacing: 0.1em;
+      margin-top: 15px;
+
+      .vwmd-date {
+
+      }
+    }
+  }
+
+  .sw-nav {
+    border-top: solid 1px $border-color;
+    border-bottom: solid 3px $main-color;
+    position: relative;
+
+    .swn-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .swnl-item {
+        height: 50px;
+        line-height: 54px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        a {
+          display: block;
+          color: $title-color;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        &:first-child {
+          line-height: 50px;
+
+          a {
+            width: 23px;
+            height: 100%;
+            background: url('../images/ico-home.svg') no-repeat center;
+
+            &:hover {
+              background-image: url('../images/ico-home-active.svg');
+            }
+          }
+
+          &.active {
+            a {
+              background-image: url('../images/ico-home-active.svg');
+            }
+          }
+        }
+
+        &:last-child {
+          a {
+            width: 25px;
+            height: 100%;
+            background: url('../images/ico-menu.svg') no-repeat center top -2px;
+          }
+
+          &.active {
+            a {
+              background: url('../images/ico-menu-close.svg') no-repeat center top -2px;
+            }
+          }
+        }
+
+        &.active {
+          a {
+            color: $main-color
+          }
+        }
+      }
+    }
+
+    .swn-menu {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 30px 30px 30px 40px;
+      position: absolute;
+      top: calc(100% + 3px);
+      left: 50%;
+      margin-left: -500px;
+      z-index: 1002;
+      display: none;
+
+      .swnm-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .swnmlc-list {
+          width: 170px;
+          margin-bottom: 20px;
+
+          &:nth-child(5n + 2) {
+            width: 30%;
+          }
+
+          &:nth-child(5n + 5) {
+            width: 120px;
+          }
+
+          .swnmlcl-category {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #fff;
+            text-transform: uppercase;
+            border-bottom: solid 2px $main-color;
+            margin-bottom: 10px;
+          }
+
+          .swnmlcl-subcategory {
+
+            a {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 20px;
+              color: #fff;
+
+              &:hover {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      .swnm-special-list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding-bottom: 30px;
+        border-bottom: solid 1px $border-color;
+
+        .swnms-item {
+          width: 170px;
+
+          &:nth-child(5n + 5) {
+            width: 120px;
+          }
+
+          &:nth-child(5n + 2) {
+            width: 30%;
+          }
+
+          a {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #fff;
+            border-bottom: solid 2px $special-color;
+          }
+        }
+      }
+
+      .swnm-bottom {
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .swnmb-left {
+          display: flex;
+          align-items: flex-end;
+
+          .swnmbl-item {
+            margin-right: 30px;
+          }
+
+          a {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            vertical-align: bottom;
+            position: relative;
+            top: 3px;
+          }
+        }
+
+        .swnmb-right {
+          display: flex;
+
+          .swnmbr-item {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

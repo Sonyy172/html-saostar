@@ -1,0 +1,82 @@
+@font-face {
+  	font-family: 'Geomanist-Medium';
+  	src: url('../fonts/geomanist/Geomanist-Medium.eot');
+  	src: url('../fonts/geomanist/Geomanist-Medium.woff2') format('woff2'),
+       	url('../fonts/geomanist/Geomanist-Medium.woff') format('woff'),
+       	url('../fonts/geomanist/Geomanist-Medium.ttf') format('truetype'),
+       	url('../fonts/geomanist/Geomanist-Medium.svg#Geomanist-Medium') format('svg'),
+       	url('../fonts/geomanist/Geomanist-Medium.eot?#iefix') format('embedded-opentype');
+ 	font-weight: normal;
+ 	font-style: normal;
+}
+@font-face {
+  	font-family: 'Geomanist-Bold';
+  	src: url('../fonts/geomanist/Geomanist-Bold.eot');
+  	src: url('../fonts/geomanist/Geomanist-Bold.woff2') format('woff2'),
+       	url('../fonts/geomanist/Geomanist-Bold.woff') format('woff'),
+       	url('../fonts/geomanist/Geomanist-Bold.ttf') format('truetype'),
+       	url('../fonts/geomanist/Geomanist-Bold.svg#Geomanist-Bold') format('svg'),
+       	url('../fonts/geomanist/Geomanist-Bold.eot?#iefix') format('embedded-opentype');
+  	font-weight: normal;
+  	font-style: normal;
+}
+@font-face {
+  	font-family: 'Geomanist-Book';
+  	src: url('../fonts/geomanist/Geomanist-Book.eot');
+  	src: url('../fonts/geomanist/Geomanist-Book.woff2') format('woff2'),
+       	url('../fonts/geomanist/Geomanist-Book.woff') format('woff'),
+       	url('../fonts/geomanist/Geomanist-Book.ttf') format('truetype'),
+       	url('../fonts/geomanist/Geomanist-Book.svg#Geomanist-Book') format('svg'),
+       	url('../fonts/geomanist/Geomanist-Book.eot?#iefix') format('embedded-opentype');
+  	font-weight: normal;
+  	font-style: normal;
+}
+@font-face {
+	font-family: 'Geomanist-Regular';
+	src: url('../fonts/geomanist/Geomanist-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/roboto/Roboto-Regular.eot');
+	src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
+		url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+		url('../fonts/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+		url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('../fonts/roboto/Roboto-Medium.eot');
+	src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/roboto/Roboto-Medium.woff') format('woff'),
+		url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+		url('../fonts/roboto/Roboto-Medium.svg#Roboto-Regular') format('svg'),
+		url('../fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/roboto/Roboto-Light.eot');
+	src: url('../fonts/roboto/Roboto-Light.woff2') format('woff2'),
+		url('../fonts/roboto/Roboto-Light.woff') format('woff'),
+		url('../fonts/roboto/Roboto-Light.ttf') format('truetype'),
+		url('../fonts/roboto/Roboto-Light.svg#Roboto-Light') format('svg'),
+		url('../fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/roboto/Roboto-Bold.eot');
+	src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+	   	url('../fonts/roboto/Roboto-Bold.woff') format('woff'),
+	   	url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'),
+	   	url('../fonts/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+	   	url('../fonts/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,63 @@
+.swp-item {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+  -moz-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+  box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2); }
+  .swp-item:nth-child(3n-1) .swp-heading {
+    background: url("../images/minicake.svg") no-repeat right 10px bottom; }
+  .swp-item:nth-child(3n) .swp-heading {
+    background: url("../images/candles.svg") no-repeat right 10px bottom; }
+  .swp-item:nth-child(3n+1) .swp-heading {
+    background: url("../images/002-star.svg") no-repeat right 10px bottom 10px; }
+  .swp-item .swp-heading {
+    border-bottom: solid 1px #d8d8d8; }
+    .swp-item .swp-heading .swph-left {
+      width: 60px;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-right: solid 1px #d8d8d8; }
+      .swp-item .swp-heading .swph-left .swphl-date {
+        font-family: 'Geomanist-Bold';
+        font-size: 28px;
+        line-height: 22px;
+        color: #FF666C;
+        display: block; }
+      .swp-item .swp-heading .swph-left .swphl-month {
+        font-family: 'Geomanist-Medium';
+        font-size: 12px; }
+    .swp-item .swp-heading .swph-right {
+      width: calc(100% - 60px);
+      padding-top: 10px;
+      padding-left: 10px; }
+      .swp-item .swp-heading .swph-right .swphr-title {
+        font-family: 'Geomanist-Book';
+        font-size: 20px;
+        line-height: 25px; }
+      .swp-item .swp-heading .swph-right .swphr-name {
+        font-family: 'Geomanist-Bold';
+        font-size: 20px;
+        line-height: 25px; }
+  .swp-item .swp-info {
+    padding: 10px; }
+    .swp-item .swp-info .swpi-title {
+      font-family: 'Geomanist-Medium';
+      font-size: 20px;
+      line-height: 25px;
+      color: #333;
+      display: block; }
+    .swp-item .swp-info .swpi-time {
+      font-family: 'Geomanist-Book';
+      font-size: 10px;
+      display: block;
+      margin: 10px 0;
+      color: #9b9b9b; }
+    .swp-item .swp-info .swpi-sapo {
+      font-family: 'Roboto-Regular';
+      font-size: 13px;
+      line-height: 18px;
+      color: #444; }
+
+/*# sourceMappingURL=include_sns.css.map */

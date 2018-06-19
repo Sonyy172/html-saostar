@@ -1,0 +1,541 @@
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+a {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+textarea {
+  resize: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.mr-0 {
+  margin-right: 0 !important; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.ml-0 {
+  margin-left: 0 !important; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
+.mt-0 {
+  margin-top: 0 !important; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mb-0 {
+  margin-bottom: 0 !important; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img, video, iframe {
+  vertical-align: middle; }
+
+.ss_bzone_middle {
+  margin: 30px auto;
+  width: 300px;
+  height: 250px;
+  background: url(../images/bg-ads.png) #fff; }
+
+.sns-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background: url("../images/sns-header-bg.jpg") no-repeat top center;
+  background-color: #F2F3F5;
+  background-size: 100%;
+  overflow: hidden;
+  position: relative; }
+  .sns-wrapper .sw-header {
+    height: 60px;
+    text-align: center;
+    padding: 0 10px;
+    position: relative; }
+    .sns-wrapper .sw-header .swh-logo {
+      display: block;
+      width: 177px;
+      line-height: 60px;
+      margin: 0 auto; }
+    .sns-wrapper .sw-header .swh-back {
+      font-size: 20px;
+      color: #fff;
+      position: absolute;
+      top: 22px;
+      left: 10px; }
+    .sns-wrapper .sw-header .swh-share {
+      font-size: 12px;
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      display: block;
+      width: 41px;
+      height: 24px;
+      line-height: 23px;
+      border-radius: 12px;
+      border: solid 1px #fff; }
+  .sns-wrapper .sw-main .swm-top {
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+    box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2); }
+    .sns-wrapper .sw-main .swm-top .swmt-thumb .swmtt-item {
+      display: block;
+      width: calc(100% * 2 / 3);
+      border-radius: 4px;
+      overflow: hidden;
+      -webkit-box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2);
+      -moz-box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2);
+      box-shadow: -3px 0 7px rgba(20, 32, 64, 0.2); }
+      .sns-wrapper .sw-main .swm-top .swmt-thumb .swmtt-item img {
+        width: 100%; }
+    .sns-wrapper .sw-main .swm-top .swmt-info {
+      padding: 10px 0; }
+      .sns-wrapper .sw-main .swm-top .swmt-info .swmti-item {
+        padding: 0 20px;
+        text-align: center; }
+        .sns-wrapper .sw-main .swm-top .swmt-info .swmti-item .swmtii-date {
+          font-family: 'Geomanist-Medium';
+          font-size: 20px;
+          color: #FF666C;
+          display: block; }
+          .sns-wrapper .sw-main .swm-top .swmt-info .swmti-item .swmtii-date .swmtiid-day {
+            font-family: 'Geomanist-Bold';
+            font-size: 24px; }
+        .sns-wrapper .sw-main .swm-top .swmt-info .swmti-item .swmtii-title {
+          display: block;
+          font-family: 'Geomanist-Medium';
+          font-size: 20px;
+          line-height: 25px;
+          color: #333;
+          margin-top: 10px; }
+        .sns-wrapper .sw-main .swm-top .swmt-info .swmti-item .swmtii-time {
+          display: block;
+          font-family: 'Geomanist-Book';
+          font-size: 10px;
+          color: #9b9b9b;
+          margin-top: 10px; }
+    .sns-wrapper .sw-main .swm-top .swmt-nav {
+      width: 140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .sns-wrapper .sw-main .swm-top .swmt-nav .swmtn-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px; }
+      .sns-wrapper .sw-main .swm-top .swmt-nav .swmtn-pagination .swiper-pagination-bullet-active {
+        background-color: #FF666C; }
+      .sns-wrapper .sw-main .swm-top .swmt-nav .swmtn-next, .sns-wrapper .sw-main .swm-top .swmt-nav .swmtn-prev {
+        color: #9b9b9b;
+        position: relative;
+        top: -1px; }
+  .sns-wrapper .sw-main .sw-calendar {
+    padding: 15px 10px;
+    background: url("../images/sns-calendar-bg.jpg") no-repeat top center;
+    background-size: cover; }
+    .sns-wrapper .sw-main .sw-calendar .swc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .sns-wrapper .sw-main .sw-calendar .swc-header .swch-left {
+        font-family: 'Geomanist-Medium';
+        font-size: 16px;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+        .sns-wrapper .sw-main .sw-calendar .swc-header .swch-left::before {
+          content: '';
+          display: inline-block;
+          width: 21px;
+          height: 25px;
+          background: url("../images/cake.svg") no-repeat center;
+          background-size: 100%;
+          margin-right: 5px; }
+      .sns-wrapper .sw-main .sw-calendar .swc-header .swch-right {
+        display: block;
+        width: 24px;
+        height: 30px;
+        background: url("../images/calendar.svg") no-repeat center 100%; }
+        .sns-wrapper .sw-main .sw-calendar .swc-header .swch-right .swchr-date {
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          position: relative; }
+          .sns-wrapper .sw-main .sw-calendar .swc-header .swch-right .swchr-date .swchr-date::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            height: auto; }
+    .sns-wrapper .sw-main .sw-calendar .swc-main {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+      .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item {
+        width: calc((100% - 20px)/3);
+        background-color: #fff;
+        border-radius: 4px;
+        border: solid 1px #ededed;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden; }
+        .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item::before {
+          content: '';
+          display: block;
+          width: 100%;
+          padding-bottom: 100%; }
+        .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item:hover .swcmi-hover {
+          display: block; }
+        .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-hover {
+          font-family: 'Geomanist-Medium';
+          font-size: 12px;
+          color: #fff;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.8);
+          display: none; }
+          .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-hover::before {
+            content: '';
+            display: block;
+            width: 39px;
+            height: 40px;
+            background: url("../images/wishing.svg") no-repeat center;
+            background-size: 100%;
+            margin: 0 auto;
+            margin-top: 25%; }
+        .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: calc(100% - 20px);
+          margin: 0 10px;
+          height: 100%; }
+          .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-date {
+            display: block;
+            font-family: 'Geomanist-Book';
+            font-size: 20px;
+            margin-top: 10px; }
+          .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-celeb {
+            margin-top: -5px; }
+            .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-celeb .swcmiic-item {
+              display: inline-block;
+              border-radius: 50%;
+              overflow: hidden;
+              border: solid 1px #fff;
+              margin-right: -5px; }
+              .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-celeb .swcmiic-item .swcmiici-img {
+                width: 100%; }
+          .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-bottom {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%; }
+            .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-bottom .swcmiib-item {
+              color: #333; }
+              .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-bottom .swcmiib-item .swcmiibi-title {
+                font-family: 'Roboto-Regular';
+                font-size: 14px;
+                display: block; }
+              .sns-wrapper .sw-main .sw-calendar .swc-main .swcm-item .swcmi-info .swcmii-bottom .swcmiib-item .swcmiibi-name {
+                font-family: 'Roboto-Bold';
+                font-size: 14px;
+                display: block; }
+  .sns-wrapper .sw-post {
+    padding: 0 10px;
+    padding-bottom: 1px; }
+    .sns-wrapper .sw-post .swp-item {
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      -moz-box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2);
+      box-shadow: 0 2px 4px rgba(20, 32, 64, 0.2); }
+      .sns-wrapper .sw-post .swp-item:nth-child(3n-1) .swp-heading {
+        background: url("../images/minicake.svg") no-repeat right 10px bottom; }
+      .sns-wrapper .sw-post .swp-item:nth-child(3n) .swp-heading {
+        background: url("../images/candles.svg") no-repeat right 10px bottom; }
+      .sns-wrapper .sw-post .swp-item:nth-child(3n+1) .swp-heading {
+        background: url("../images/002-star.svg") no-repeat right 10px bottom 10px; }
+      .sns-wrapper .sw-post .swp-item .swp-heading .swph-left {
+        width: 60px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-right: solid 1px #d8d8d8; }
+        .sns-wrapper .sw-post .swp-item .swp-heading .swph-left .swphl-date {
+          font-family: 'Geomanist-Bold';
+          font-size: 28px;
+          line-height: 22px;
+          color: #FF666C;
+          display: block; }
+        .sns-wrapper .sw-post .swp-item .swp-heading .swph-left .swphl-month {
+          font-family: 'Geomanist-Medium';
+          font-size: 12px; }
+      .sns-wrapper .sw-post .swp-item .swp-heading .swph-right {
+        width: calc(100% - 60px);
+        padding-top: 10px;
+        padding-left: 10px; }
+        .sns-wrapper .sw-post .swp-item .swp-heading .swph-right .swphr-title {
+          font-family: 'Geomanist-Book';
+          font-size: 20px;
+          line-height: 25px; }
+        .sns-wrapper .sw-post .swp-item .swp-heading .swph-right .swphr-name {
+          font-family: 'Geomanist-Bold';
+          font-size: 20px;
+          line-height: 25px; }
+      .sns-wrapper .sw-post .swp-item .swp-thumb {
+        width: 100%; }
+        .sns-wrapper .sw-post .swp-item .swp-thumb img {
+          width: 100%; }
+      .sns-wrapper .sw-post .swp-item .swp-info {
+        padding: 10px; }
+        .sns-wrapper .sw-post .swp-item .swp-info .swpi-title {
+          font-family: 'Geomanist-Medium';
+          font-size: 20px;
+          line-height: 25px;
+          color: #333;
+          display: block; }
+        .sns-wrapper .sw-post .swp-item .swp-info .swpi-time {
+          font-family: 'Geomanist-Book';
+          font-size: 10px;
+          display: block;
+          margin: 10px 0;
+          color: #9b9b9b; }
+        .sns-wrapper .sw-post .swp-item .swp-info .swpi-sapo {
+          font-family: 'Roboto-Regular';
+          font-size: 13px;
+          line-height: 18px;
+          color: #444; }
+      .sns-wrapper .sw-post .swp-item .swp-interaction {
+        padding: 10px;
+        border-top: solid 1px #f2f3f5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .sns-wrapper .sw-post .swp-item .swp-interaction .swpi-like {
+          font-family: 'Geomanist-Book';
+          font-size: 12px;
+          color: #9b9b9b;
+          display: block; }
+          .sns-wrapper .sw-post .swp-item .swp-interaction .swpi-like::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url("../images/sns-like.svg") no-repeat left center;
+            margin-right: 5px; }
+        .sns-wrapper .sw-post .swp-item .swp-interaction .swpi-share {
+          font-family: 'Geomanist-Book';
+          font-size: 12px;
+          line-height: 24px;
+          color: #9b9b9b;
+          padding: 0 15px;
+          border: solid 1px #9b9b9b;
+          border-radius: 12px; }
+          .sns-wrapper .sw-post .swp-item .swp-interaction .swpi-share::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url("../images/sns-share.svg") no-repeat left center;
+            margin-bottom: -1px;
+            margin-right: 5px; }
+    .sns-wrapper .sw-post .swp-viewmore {
+      font-family: 'Roboto-Medium';
+      font-size: 14px;
+      line-height: 32px;
+      color: #fff;
+      display: block;
+      text-align: center;
+      border-radius: 4px;
+      background-color: #8E8E93;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09); }
+  .sns-wrapper .sw-calendar-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    width: 100%;
+    height: 100vh;
+    display: none; }
+    .sns-wrapper .sw-calendar-popup .swcp-bg {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .sns-wrapper .sw-calendar-popup .swcp-main {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      width: calc(100% - 20px);
+      background-color: #fff;
+      border-radius: 4px;
+      overflow: hidden; }
+      .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list {
+        overflow: hidden; }
+        .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcp-notice {
+          font-family: 'Geomanist-Regular';
+          font-size: 16px;
+          background-color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          color: #ED676B; }
+        .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #fff;
+          padding: 15px 15px;
+          border-bottom: solid 1px #e8e8e8; }
+          .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item:last-child {
+            overflow: hidden; }
+          .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item .swcpli-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden; }
+            .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item .swcpli-avatar img {
+              width: 100%; }
+          .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item .swcpli-info {
+            width: calc(100% - 50px); }
+            .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item .swcpli-info .swcpli-title {
+              font-family: 'Geomanist-Regular';
+              font-size: 14px;
+              color: #333;
+              display: block; }
+            .sns-wrapper .sw-calendar-popup .swcp-main .swcp-list .swcpl-item .swcpli-info .swcpli-name {
+              font-family: 'Geomanist-Book';
+              font-size: 18px;
+              color: #333;
+              display: block;
+              margin-top: 3px; }
+
+/*# sourceMappingURL=sns.css.map */

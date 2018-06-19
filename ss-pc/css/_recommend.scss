@@ -1,0 +1,35 @@
+.sw-recommend {
+  margin-top:  30px;
+  margin-bottom: 30px;
+
+  .swr-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .swrl-item {
+      width: 300px;
+      margin-bottom: 20px;
+
+      .swrli-thumb {
+        @include thumbnail(100%);
+      }
+
+      .swrli-title {
+        @include title(600, 20px, 25px);
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .swr-viewmore {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: $label-tag;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+  }
+}

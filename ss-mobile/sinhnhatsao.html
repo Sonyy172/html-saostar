@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/sns.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script>
+        $(document).ready(function() {
+            var topslidethumb = new Swiper('.swmt-thumb', {
+                slidesPerView: 1.45,
+                centeredSlides: true,
+                spaceBetween: 20,
+                loop: true
+            }),
+                topslideinfo = new Swiper('.swmt-info', {
+                    speed: 600,
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    spaceBetween: 20,
+                    loop: true,
+                    effect: 'fade',
+                    pagination: '.swmtn-pagination'
+                });
+            topslidethumb.params.control = topslideinfo;
+            topslideinfo.params.control = topslidethumb;
+
+            // Celendar
+            $('.swcmii-celeb').each(function() {
+                var celebitem = $(this).find('.swcmiic-item').length;
+                if(celebitem == 1) {
+                    $(this).find('.swcmiic-item').css({
+                        width: '40px',
+                        height: '40px'
+                    })
+                } else {
+                    $(this).find('.swcmiic-item').css({
+                        width: '30px',
+                        height: '30px'
+                    })
+                }
+            })
+
+            $('.swch-right').click(function() {
+                $('.sw-calendar-popup').fadeIn().css('display', 'table');
+            });
+
+            $('.swcp-bg').click(function() {
+                $('.sw-calendar-popup').fadeOut();
+            });
+
+            // Datepicker
+            var sns_data = [
+                {
+                    date: '26/02/2018',
+                    title: 'Diễn viên',
+                    name: 'Lưu Đức Hoa',
+                    avatar: 'assets/images/celeb.jpg'
+                },
+                {
+                    date: '27/02/2018',
+                    title: 'Designer',
+                    name: 'Đoàn Lê Thanh',
+                    avatar: 'assets/images/celeb.jpg'
+                },
+                {
+                    date: '27/02/2018',
+                    title: 'Diễn viên',
+                    name: 'Lâm Tâm Như',
+                    avatar: 'assets/images/celeb.jpg'
+                },
+                {
+                    date: '28/02/2018',
+                    title: 'Diễn viên',
+                    name: 'Lưu Đức Hoa',
+                    avatar: 'assets/images/celeb.jpg'
+                }
+            ];
+
+            $('.swcp-datepicker').datepicker({
+                onSelect: function(dateText, inst) {
+                    var sns_count = 0;
+                    $('.swcpn-count').text(sns_count);
+                    $('.swcp-list').find('.swcpl-item').remove();
+                    for(i = 0; i < sns_data.length; i++) {
+                        if(dateText == sns_data[i].date) {
+                            sns_count++;
+                            $('.swcpn-count').text(sns_count);
+                            $('.swcp-list').hide().fadeIn().append('<div class="swcpl-item"><div class="swcpli-avatar"><img src="' + sns_data[i].avatar + '" alt=""></div><div class="swcpli-info"><span class="swcpli-title">' + sns_data[i].title + '</span><span class="swcpli-name">' + sns_data[i].name + '</span></div></div>');
+                        }
+                    }
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="sns-wrapper">
+        <div class="sw-header">
+            <a href="#" class="swh-back"><i class="fa fa-long-arrow-left"></i></a>
+
+            <a href="#" class="swh-logo">
+                <img src="assets/images/sinhnhatsao_logo.svg" alt="">
+            </a>
+
+            <a href="#" class="swh-share"><i class="fa fa-share-alt"></i></a>
+        </div>
+
+        <div class="sw-main">
+            <div class="swm-top">
+                <div class="swmt-thumb swiper-container">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swmtt-item swiper-slide">
+                            <img src="assets/images/sns-thumb.jpg" alt="">
+                        </a>
+
+                        <a href="#" class="swmtt-item swiper-slide">
+                            <img src="assets/images/sns-thumb.jpg" alt="">
+                        </a>
+
+                        <a href="#" class="swmtt-item swiper-slide">
+                            <img src="assets/images/sns-thumb.jpg" alt="">
+                        </a>
+
+                        <a href="#" class="swmtt-item swiper-slide">
+                            <img src="assets/images/sns-thumb.jpg" alt="">
+                        </a>
+
+                        <a href="#" class="swmtt-item swiper-slide">
+                            <img src="assets/images/sns-thumb.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swmt-info swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swmti-item swiper-slide">
+                            <span class="swmtii-date"><span class="swmtiid-day">27</span> Tháng 1</span>
+                            <a href="#" class="swmtii-title">Lâm Tâm Như tuổi 42: Nàng cách cách năm ấy cuối cùng cũng có 1 nụ cười an nhiên</a>
+                            <span class="swmtii-time">07:00 | 27/01/2017</span>
+                        </div>
+
+                        <div class="swmti-item swiper-slide">
+                            <span class="swmtii-date"><span class="swmtiid-day">28</span> Tháng 1</span>
+                            <a href="#" class="swmtii-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+                            <span class="swmtii-time">07:00 | 27/01/2017</span>
+                        </div>
+
+                        <div class="swmti-item swiper-slide">
+                            <span class="swmtii-date"><span class="swmtiid-day">27</span> Tháng 1</span>
+                            <a href="#" class="swmtii-title">Lâm Tâm Như tuổi 42: Nàng cách cách năm ấy cuối cùng cũng có 1 nụ cười an nhiên</a>
+                            <span class="swmtii-time">07:00 | 27/01/2017</span>
+                        </div>
+
+                        <div class="swmti-item swiper-slide">
+                            <span class="swmtii-date"><span class="swmtiid-day">27</span> Tháng 1</span>
+                            <a href="#" class="swmtii-title">Lâm Tâm Như tuổi 42: Nàng cách cách năm ấy cuối cùng cũng có 1 nụ cười an nhiên</a>
+                            <span class="swmtii-time">07:00 | 27/01/2017</span>
+                        </div>
+
+                        <div class="swmti-item swiper-slide">
+                            <span class="swmtii-date"><span class="swmtiid-day">27</span> Tháng 1</span>
+                            <a href="#" class="swmtii-title">Lâm Tâm Như tuổi 42: Nàng cách cách năm ấy cuối cùng cũng có 1 nụ cười an nhiên</a>
+                            <span class="swmtii-time">07:00 | 27/01/2017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swmt-nav">
+                    <div class="swmtn-prev"><i class="fa fa-angle-left"></i></div>
+                    <div class="swmtn-pagination"></div>
+                    <div class="swmtn-next"><i class="fa fa-angle-right"></i></div>
+                </div>
+            </div>
+
+            <div class="sw-calendar">
+                <div class="swc-header">
+                    <span class="swch-left">Sinh nhật Sao sắp đến</span>
+
+                    <span class="swch-right"></span>
+                </div>
+
+                <div class="swc-main">
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">01</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-title">Ca sĩ</span>
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="swcmi-hover">Gửi lời chúc</span>
+                    </div>
+
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">02</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-name">Shakira</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">01</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-title">Ca sĩ</span>
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">01</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-title">Ca sĩ</span>
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">01</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-title">Ca sĩ</span>
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swcm-item">
+                        <div class="swcmi-info">
+                            <span class="swcmii-date">02</span>
+
+                            <div class="swcmii-celeb clearfix">
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+
+                                <div class="swcmiic-item fr">
+                                    <img src="assets/images/celeb.jpg" alt="" class="swcmiici-img">
+                                </div>
+                            </div>
+
+                            <div class="swcmii-bottom">
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-name">Bon Jovi</span>
+                                </div>
+
+                                <div class="swcmiib-item">
+                                    <span class="swcmiibi-name">Shakira</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sw-post">
+                <div class="ss_bzone_middle"></div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <div class="swp-item">
+                    <div class="swp-heading clearfix">
+                        <div class="swph-left fl">
+                            <span class="swphl-date">28</span>
+                            <span class="swphl-month">Tháng 1</span>
+                        </div>
+
+                        <div class="swph-right fr">
+                            <div class="swphr-title">Ca sĩ</div>
+                            <div class="swphr-name">ADAM LAMBERT</div>
+                        </div>
+                    </div>
+
+                    <div class="swp-thumb">
+                        <img src="assets/images/sns-thumb-1.jpg" alt="">
+                    </div>
+
+                    <div class="swp-info">
+                        <a href="#" class="swpi-title">Adam Lambert và U23 Việt Nam: khi những Á quân tỏa sáng hơn cả nhà vô địch</a>
+
+                        <span class="swpi-time">16:50 | 26/01/2017</span>
+
+                        <span class="swpi-sapo">Gửi đến những trái tim bé nhỏ đã "uống nhầm một ánh mắt, cơn say theo cả đời" với Kim Jae Joong. Anh chàng đã 33 rồi, bạn còn yêu chứ?</span>
+                    </div>
+
+                    <div class="swp-interaction">
+                        <span class="swpi-like">5.2k lượt thích</span>
+
+                        <a href="#" class="swpi-share">Share</a>
+                    </div>
+                </div>
+
+                <a href="#" class="swp-viewmore"><i class="fa fa-angle-down"></i> Xem thêm</a>
+
+                <div class="ss_bzone_middle"></div>
+            </div>
+        </div>
+
+        <div class="sw-calendar-popup">
+            <div class="swcp-bg"></div>
+
+            <div class="swcp-main">
+                <div class="swcp-datepicker"></div>
+
+                <div class="swcp-list">
+                    <div class="swcp-notice">
+                        Có <span class="swcpn-count">1</span> sinh nhật trong ngày này
+                    </div>
+
+                    <div class="swcpl-item">
+                        <div class="swcpli-avatar">
+                            <img src="assets/images/celeb.jpg" alt="">
+                        </div>
+
+                        <div class="swcpli-info">
+                            <span class="swcpli-title">Diễn viên</span>
+                            <span class="swcpli-name">Lưu Đức Hoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

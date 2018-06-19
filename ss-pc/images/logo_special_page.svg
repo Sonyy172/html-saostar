@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="363px" height="101px" viewBox="0 0 363 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="55.2903974%" y1="129.330421%" x2="47.9982523%" y2="-90.3881615%" id="linearGradient-1">
+            <stop stop-color="#B17E0F" offset="0%"></stop>
+            <stop stop-color="#F1C24D" offset="68.3892698%"></stop>
+            <stop stop-color="#E8BE38" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="saostar-pc-special" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-781.000000, -365.000000)">
+        <g id="Group-6-Copy" transform="translate(777.000000, 360.000000)">
+            <text id="THE-SAOSTAR" font-family="Geomanist-Medium, Geomanist" font-size="24" font-weight="400" letter-spacing="3.75999999" fill="#333333">
+                <tspan x="90.9640001" y="23">THE SAOSTAR</tspan>
+            </text>
+            <text id="SPECIAL" fill="url(#linearGradient-1)" font-family="SVN-ConquerorDidot, SVN-Conqueror Didot" font-size="76" font-weight="normal" letter-spacing="8.89000034">
+                <tspan x="0" y="88">SPECIA</tspan>
+                <tspan x="324.812002" y="88">L</tspan>
+            </text>
+            <rect id="Rectangle-8" fill="#333333" x="4" y="15" width="80" height="1"></rect>
+            <rect id="Rectangle-8-Copy-3" fill="#333333" x="287" y="15" width="80" height="1"></rect>
+            <rect id="Rectangle-8-Copy-2" fill="#333333" x="4" y="105" width="363" height="1"></rect>
+        </g>
+    </g>
+</svg>

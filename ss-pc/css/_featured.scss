@@ -1,0 +1,216 @@
+.swbh-featured {
+  padding-top: 15px;
+
+  .swbhf-left {
+    width: 660px;
+
+    .swbhfl-list {
+
+      .swbhfll-item {
+        padding: 15px 0;
+        border-bottom: solid 1px $border-color;
+
+        .swbhflli-thumb {
+          @include thumbnail(180px);
+        }
+
+        .swbhflli-right {
+          width: 460px;
+
+          .swbhfllir-tag {
+            @include tag();
+            margin-bottom: 10px;
+          }
+
+          .swbhfllir-title {
+            @include title(600, 20px, 25px);
+          }
+
+          .swbhfllir-info {
+            margin: 10px 0;
+          }
+
+          .swbhflliri-sapo {
+            @include sapo(14px, 20px);
+          }
+        }
+
+        &:first-child {
+          padding-top: 0;
+
+          .swbhflli-thumb {
+            @include thumbnail(280px);
+
+            .swbhfllit-tag {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              @include tag();
+            }
+          }
+
+          .swbhflli-right {
+            width: 360px;
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .swbhfl-hotface {
+      margin-bottom: 15px;
+      @include border_top();
+      @include border_bottom();
+
+      .swbhflh-heading {
+        @include heading();
+      }
+
+      .swbhflh-wrapper {
+        background-color: #F2F3F5;
+
+        .swbhflhw-info {
+          padding: 0 20px 20px;
+          margin-top: 10px;
+
+          .swbhflhwi-title {
+            @include title(600, 20px, 28px);
+            a {
+              margin-top: 10px;
+            }
+          }
+
+          .swbhflhwi-info {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .swbhf-right {
+    width: 300px;
+
+    .swbhfr-bancanbiet {
+      .swbhfrb-heading {
+        @include heading();
+      }
+
+      .swbhfrb-item {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: solid 1px $border-color;
+
+        .swbhfrbi-thumb {
+          @include thumbnail(120px);
+        }
+
+        .swbhfrbi-title {
+          @include title(600, 14px, 18px);
+          width: 170px;
+        }
+      }
+    }
+
+    .swbhfr-hottrend {
+      padding-bottom: 10px;
+      border-bottom: solid 1px $border-color;
+
+      .swbhfrh-heading {
+        @include heading();
+      }
+
+      .swbhfrh-tag {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 0 5px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        height: 23px;
+        line-height: 23px;
+        border-radius: 11px;
+        border: solid 1px $label-tag;
+        color: $title-color;
+
+        &:hover {
+          color: #fff;
+          background-color: $label-tag;
+        }
+      }
+    }
+  }
+
+  .swbh-category {
+    @include border_bottom();
+    margin-top: 15px;
+
+    &:last-child {
+      padding-bottom: 15px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swbhc-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .swbhc-item {
+        width: 300px;
+
+        .swbhci-heading {
+          @include heading();
+
+          .swbhcih-text::before {
+            display: none;
+          }
+        }
+
+        .swbhci-post {
+          padding: 15px 0;
+          border-bottom: solid 1px $border-color;
+
+          .swbhcip-thumb {
+            @include thumbnail(120px);
+          }
+
+          .swbhcip-title {
+            @include title(600, 14px, 18px);
+            width: 170px;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+
+        .swbhci-post:nth-child(2) {
+          padding-top: 0;
+
+          .swbhcip-thumb {
+            @include thumbnail(100%);
+
+            .swbhcipt-tag {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              @include tag();
+            }
+          }
+
+          .swbhcip-title {
+            @include title(600, 20px, 25px);
+            margin-top: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

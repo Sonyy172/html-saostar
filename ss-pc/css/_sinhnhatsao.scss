@@ -1,0 +1,156 @@
+.sns-home {
+  background: url('../images/bg-sns.jpg') no-repeat center top;
+  background-size: 100%;
+  position: relative;
+  height: 100%;
+
+  .sns-title {
+    text-align: right;
+    padding-top: 5px;
+    position: relative;
+    margin-bottom: 15px;
+
+    a {
+      display: block;
+      margin-right: 15px;
+    }
+  }
+
+  .snsh-confetti {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
+  .snsh-balloon {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .snsh-cake {
+    position: absolute;
+    top: 185px;
+    right: 0;
+    z-index: 2;
+  }
+
+  .snsh-thumb {
+    width: 270px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 15px;
+
+    .snsht-item {
+      @include thumbnail(100%);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.36);
+    }
+  }
+
+  .snsh-info {
+    width: 280px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+
+    .snshi-item {
+
+      .snshii-heading {
+        display: flex;
+        border-bottom: solid 1px $border-color;
+
+        .snshiih-left {
+          width: 50px;
+          text-align: center;
+          border-right: solid 1px $border-color;
+
+
+          .snshiihl-date {
+            display: block;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            color: $label-tag;
+            padding-top: 10px;
+          }
+
+          .snshiihl-month {
+            margin-top: -3px;
+            display: block;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 14px;
+            color: $title-color;
+          }
+        }
+
+        .snshiih-right {
+          width: 230px;
+          padding-left: 10px;
+
+          .snshiihr-title {
+            display: block;
+            font-weight: 500;
+            font-size: 18px;
+            color: $title-color;
+            padding-top: 11px;
+          }
+
+          .snshiihr-name {
+            display: block;
+            font-weight: 700;
+            font-size: 18px;
+            color: $title-color;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .snshii-content {
+        padding: 10px;
+
+        .snshiic-title {
+          @include title(600, 14px, 18px);
+          margin-bottom: 5px;
+        }
+
+        .snshiic-sapo {
+          @include  sapo(13px, 18px);
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .snshi-nav {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .snshi-pagination {
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: $transparent;
+        border: solid 1px #fff;
+        opacity: 1;
+        margin: 0 4px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .viewmore {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}

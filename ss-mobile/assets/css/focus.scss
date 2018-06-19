@@ -1,0 +1,310 @@
+@import "reset";
+
+$main-color : #ED1C24;
+$white : #fff;
+$black : #333;
+
+@mixin text($font-family) {
+  font-family: $font-family;
+}
+
+@mixin thumb($width) {
+  display: block;
+  width: $width;
+  padding-bottom: $width * 407 / 255;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+@mixin info($font-size, $line-height, $margin, $width, $height) {
+  font-family: 'Geomanist-Book';
+  color: #9b9b9b;
+  font-size: $font-size;
+  height: 25px;
+  line-height: $line-height;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  .p-like {
+    margin-right: $margin;
+  }
+
+  .pl-icon {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background: url('../images/focus-like.svg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: 1px;
+  }
+
+  .ps-icon {
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url('../images/focus-slide.svg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: 1px;
+  }
+}
+
+@mixin pagination() {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  .swiper-pagination-bullet {
+    background-color: #9b9b9b;
+    opacity: 1;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $main-color;
+  }
+
+  .fwmsn-next, .fwmsn-prev, .fwmsh-next, .fwmsh-prev {
+    color: #9b9b9b;
+    margin-top: -1px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img, video, iframe {
+  vertical-align: middle;
+}
+.ss_bzone_middle {
+  margin: 30px auto;
+  width: 300px;
+  height: 250px;
+  background: url(../images/bg-ads.png) #fff ;
+}
+
+.focus-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: $black;
+
+  .fw-header {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1003;
+
+    &>a {
+      width: 100%;
+      color: $black;
+
+      &.fwh-back {
+        font-size: 20px;
+      }
+
+      &.fwh-logo {
+        text-align: center;
+
+        img {
+          height: 32px;
+        }
+      }
+
+      &.fwh-share {
+        text-align: right;
+      }
+
+      &.fwh-share {
+        i {
+          display: inline-block;
+          font-size: 12px;
+          height: 24px;
+          width: 41px;
+          border-radius: 12px;
+          border: solid 1px $black;
+          text-align: center;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .fw-main {
+    padding-top: 55px;
+    padding-bottom: 1px;
+
+    .fwm-section {
+      margin-top: 40px;
+
+      .fwms-heading {
+        font-family: 'Geomanist-Medium';
+        color: $white;
+        padding-bottom: 3px;
+        border-bottom: solid 3px #d8d8d8;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+
+        .fwmsh-text {
+          display: inline-block;
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+          }
+
+          &>i {
+            color: $main-color;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .fwms-new {
+
+        .fwmsn-item {
+          background-color: $white;
+          width: 68%;
+          border-radius: 4px;
+          overflow: hidden;
+
+          .fwmsni-thumb {
+            @include thumb(100%);
+          }
+
+          .fwmsi-info {
+            @include info(12px, 30px, 10px, 13px, 11px);
+          }
+        }
+
+        .fwmsn-nav {
+          @include pagination();
+        }
+      }
+
+      .fwms-hot {
+        padding-left: 10px;
+
+        .fwmsh-item {
+          background-color: $white;
+          width: 60%;
+          border-radius: 4px;
+          overflow: hidden;
+
+          .fwmshi-thumb {
+            @include thumb(100%);
+          }
+
+          .fwmsi-info {
+            @include info(12px, 30px, 0, 13px, 11px);
+          }
+        }
+
+        .fwmsh-nav {
+          @include pagination();
+        }
+      }
+
+      .fwms-old {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .fwmso-item {
+          background-color: $white;
+          width: calc((100% - 20px) / 2);
+          border-radius: 4px;
+          overflow: hidden;
+          margin-bottom: 20px;
+
+          .fwmsoi-thumb {
+            @include thumb(100%);
+          }
+
+          .fwmsi-info {
+            @include info(10px, 30px, 0, 11px, 10px);
+          }
+        }
+
+        .fwmso-viewmore {
+          display: block;
+          width: 100%;
+          background-color: #8E8E93;
+          border-radius: 4px;
+          font-family: 'Roboto-Medium';
+          font-size: 14px;
+          text-align: center;
+          height: 32px;
+          line-height: 32px;
+          color: #fff;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px){
+  .focus-wrapper {
+    .fw-main {
+      .fwm-section {
+        .fwms-new {
+         .fwmsn-item {
+           width: 58%;
+         }
+        }
+
+        .fwms-hot {
+          .fwmsh-item {
+            width: 50%;
+          }
+        }
+
+        .fwms-old {
+          .fwmso-item {
+            width: calc((100% - 40px) / 3);
+          }
+        }
+      }
+    }
+  }
+}

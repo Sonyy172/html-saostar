@@ -1,0 +1,200 @@
+.swb-home {
+  padding-top: 15px;
+
+  .swbh-top-post {
+    padding-bottom: 25px;
+    border-bottom: solid 1px $main-color;
+
+    .swbht-left {
+      width: 680px;
+
+      .swbhtl-zone1 {
+        padding-bottom: 20px;
+        border-bottom: solid 1px $border-color;
+
+        .swbhtlz1-top1 {
+          width: 475px;
+
+          .swbhtlz1t1-thumb {
+            display: block;
+            width: 100%;
+            height: 296px;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .swbhtlz1t1t-tag {
+              position: absolute;
+              bottom: 10px;
+              left: 10px;
+              @include tag();
+            }
+          }
+
+          .swbhtlz1t1-title {
+            @include title(600, 24px, 30px);
+            margin-top: 10px;
+          }
+
+          .swbhtlz1t1-sapo {
+            @include sapo(14px, 20px);
+            margin-top: 5px;
+          }
+        }
+
+        .swbhtlz1-top2 {
+          width: 185px;
+
+          .swbhtlz1t2-thumb {
+            display: block;
+            width: 100%;
+            height: 296px;
+            position: relative;
+            overflow: hidden;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .swbhtlz1t2-title {
+            @include title(600, 18px, 24px);
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .swbhtl-zone2 {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+
+        .swbhtlz2-item {
+          width: calc((100% - 40px) / 3);
+
+          .swbhtlz2i-thumb {
+            @include thumbnail(100%);
+          }
+
+          .swbhtlz2i-title {
+            @include title(600, 16px, 22px);
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .swbht-right {
+      width: 300px;
+    }
+  }
+
+  .swbh-dongsukien {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px $border-color;
+
+    .swbhd-heading {
+      @include heading();
+    }
+
+    .swbhd-cover {
+      position: relative;
+
+      .swbhdc-thumb {
+        display: block;
+        width: 100%;
+        height: 350px;
+        color: #fff;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swbhdct-info {
+          display: block;
+          width: 615px;
+          padding-left: 20px;
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+
+          .swbhdcti-tag {
+            @include tag();
+          }
+
+          .swbhdcti-title {
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 32px;
+            color: #fff;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+
+    .swbhd-list {
+      width: 220px;
+      height: 275px;
+      border-left: solid 2px $main-color;
+      padding-left: 10px;
+      position: absolute;
+      top: 25px;
+      right: 15px;
+
+      .swbhdl-item {
+        padding: 5px 0;
+        border-bottom: solid 1px #979797;
+        @include title(600, 12px, 16px);
+
+        a {
+          color: #fff;
+        }
+
+        &:nth-child(4) {
+          border-bottom: none;
+        }
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+
+      .swbhdli-viewmore {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #fff;
+        display: inline-block;
+        border-bottom: solid 1px $main-color;
+      }
+    }
+  }
+}

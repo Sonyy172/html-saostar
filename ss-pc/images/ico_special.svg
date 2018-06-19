@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="228px" height="34px" viewBox="0 0 228 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>SPECIAL</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="55.2903974%" y1="129.330421%" x2="47.9982523%" y2="-90.3881615%" id="linearGradient-1">
+            <stop stop-color="#B17E0F" offset="0%"></stop>
+            <stop stop-color="#F1C24D" offset="68.3892698%"></stop>
+            <stop stop-color="#E8BE38" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="saostar-pc-special" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-844.000000, -284.000000)" font-family="SVN-ConquerorDidot, SVN-Conqueror Didot" font-size="48" font-weight="normal" letter-spacing="5.61473703">
+        <text id="SPECIAL" fill="url(#linearGradient-1)">
+            <tspan x="840" y="317">SPECIAL</tspan>
+        </text>
+    </g>
+</svg>

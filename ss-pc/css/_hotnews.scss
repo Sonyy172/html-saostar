@@ -1,0 +1,117 @@
+.swbh-hot {
+  padding: 15px 10px;
+  background-color: #f2f3f5;
+
+  .swbhh-heading {
+    @include heading();
+
+    .swbhh-text::before {
+      width: 21px;
+      height: 20px;
+      background: url('../images/ico-hotnews.svg') no-repeat center;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .swbhh-container {
+    width: calc(100% - 10px);
+    margin-left: 10px;
+
+    .swbhhc-item {
+      width: 270px;
+      display: flex;
+
+      .swbhhci-thumb {
+        display: block;
+        width: 100px;
+        height: 138px;
+        color: #fff;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swbhhcit-num {
+          display: block;
+          width: 30px;
+          height: 30px;
+          line-height: 34px;
+          background-color: $label-tag;
+          font-size: 20px;
+          font-weight: 700;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+        }
+      }
+
+      .swbhhci-right {
+        padding-left: 10px;
+        width: 170px;
+        position: relative;
+
+        .swbhhcir-title {
+          @include title(600, 14px, 20px);
+        }
+
+        .swbhhcir-date {
+          display: block;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          margin-top: 5px;
+        }
+
+        .swbhhcir-count {
+          font-weight: 500;
+          font-size: 12px;
+          color: #666;
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          width: 160px;
+          display: flex;
+          justify-content: space-between;
+
+          .swbhhcirc-view::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 9px;
+            background: url('../images/ico-hotnews-view.svg') no-repeat center;
+            margin-right: 5px;
+          }
+
+          .swbhhcirc-like::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url('../images/ico-hotnews-like.svg') no-repeat center center;
+            margin-right: 5px;
+            vertical-align: middle;
+            margin-top: -3px;
+          }
+
+          .swbhhcirc-share::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url('../images/ico-hotnews-share.svg') no-repeat center;
+            margin-right: 5px;
+            vertical-align: middle;
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+  }
+}
