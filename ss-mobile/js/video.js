@@ -13,16 +13,17 @@ function closeNav() {
 }
 
 function openSearch () {
-	document.getElementById("input-search-video").style.display = "inline-block";
 	document.getElementById("input-search-video").style.width = "200px";
 	document.getElementById("full-screen2").style.width = "100%";
 	document.getElementById("search-btn").style.color = "#ed1c24";
+	document.getElementById("input-search-video").classList.add("active");
 }
 
 function closeSearch () {
 	document.getElementById("input-search-video").style.width = "0";
 	document.getElementById("full-screen2").style.width = "0";
-	document.getElementById("input-search-video").style.display = "none";
+	document.getElementById("search-btn").style.color = "#9b9b9b";
+	document.getElementById("input-search-video").classList.remove("active");
 }
 
 $(document).click(function(event){
@@ -30,6 +31,7 @@ $(document).click(function(event){
 	if (!$(event.target).is("#menu-video") && ( $("#menu-video").css('width') != '0px')) {
 		closeNav();
 	} 
+
 	if ($(event.target).is('.open-menu')) {
 		openNav();
 	}
@@ -40,13 +42,16 @@ $(document).click(function(event){
 	if ($(event.target).is('.search-btn i')) {
 		openSearch();
 	}
-	
-	// if (!$(event.target).is("#input-search-video") && ( $("#input-search-video").css('width') != '0px')) {
-	// 	closeSearch();
-	// }
+
+	var fullscreen2width = $("#full-screen2").width();
+	if (!$(event.target).is("#input-search-video") && (fullscreen2width != '0')) {
+		closeSearch();
+	} 
 
 });
+
 $(document).ready(function(){
+
     var samecatevideo = new Swiper('.same-cate-video-container', {
         loop: true,
         slidesPerView: 1.6,
@@ -55,6 +60,7 @@ $(document).ready(function(){
         prevButton: '.sns-prev',
         nextButton: '.sns-next'
     });
+
     var hotvideo = new Swiper('.hot-video-container', {
         loop: true,
         slidesPerView: 1.6,
@@ -62,6 +68,7 @@ $(document).ready(function(){
         prevButton: '.sns-prev',
         nextButton: '.sns-next'
     });
+
     var newestvideo = new Swiper('.newest-video-container', {
         loop: true,
         slidesPerView: 1.6,

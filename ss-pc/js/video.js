@@ -24,7 +24,7 @@ $(document).ready(function(){
         nextButton: '.sns-next'
     });
 
-    $('.box-video .list').css("height", "465px");
+    $('.box-video .list').css("height", "435px");
 
     var boxvideo = new Swiper('.box-video .list',{
         direction: 'vertical',
@@ -52,17 +52,13 @@ $(document).click(function(event){
 
 
 function openNav() {
-    // document.getElementById("menu-video").style.width = "250px";
-    // document.getElementById("menu-video").style.zIndex = "1";
-    // document.getElementById("menu-video").style.height = "635px";
+
     $('.menu-video').slideDown('fast', 'swing');
     console.log('open nav');
 }
 
 function closeNav() {
-    // document.getElementById("menu-video").style.width = "0";
-    // document.getElementById("menu-video").style.height = "0";
-    // document.getElementById("menu-video").style.zIndex = "-1";
+
     $('.menu-video').slideUp('fast', 'swing');
     console.log('close nav');
 }

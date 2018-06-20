@@ -167,7 +167,7 @@
 
 
 .thumb-video {
-	position: relative;
+	/*position: relative;*/
 }
 .thumb-video img {
 	width: 100%;
@@ -179,7 +179,7 @@
     font-size: 30px;
     color: #fff;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -274,6 +274,15 @@
     border-left: 3px solid #ed1c24;
 }
 
+.box-main .list-video-col .thumb-video:after {
+    top: 24%;
+}
+.loadmore:after {
+    font-family: "FontAwesome";
+    content: '\f107';
+    font-size: 20px;
+    margin-left: 15px;
+}
 
 /*==================================================
 VIDEO SUB
@@ -338,6 +347,7 @@ VIDEO SUB
 	height: 40px;
 	line-height: 40px;
 	padding-left: 3px;
+    top: 24%;
 }	
 .main-video {
 	margin-bottom: 15px;
@@ -364,6 +374,13 @@ VIDEO SUB
     color: #fff;
 }
 
+.box-top-video-sub .thumb-video.w900 {
+    position: relative;
+}
+.box-top-video-sub .thumb-video.w900:after {
+    top: 40%;
+}
+
 
 /*============================================================
 VIDEO SINGLE
@@ -372,6 +389,9 @@ VIDEO SINGLE
 	background: #ffffff;
 	padding-bottom: 30px;
 	padding-top: 20px;
+}
+.box-top-video-single .w660 .thumb-video:after {
+    top: 24%;
 }
 .related-video .thumb-video:after {
 	content: none;
@@ -491,7 +511,7 @@ VIDEO SINGLE
     line-height: 25px;
     padding-left: 3px;
     bottom: 10px;
-    top: unset;
+    top: 80px;
     right: unset;
     left: 10px;
     border: none;
