@@ -117,6 +117,9 @@
     font-weight: 600;
     font-size: 16px;
     font-family: Arial;
+    padding: 20px 5px;
+    position: relative;
+    top: -20px;
 }
 .read:after {
 	content: '\f178';
@@ -124,7 +127,12 @@
 	margin-right: 7px;
 	margin-left: 10px;
 }
-
+.read:hover {
+    color: #ed1c24;
+    box-shadow: 0 0 4px 0 rgba(20, 32, 64, 0.2);
+    
+    border-radius: 6px;
+}
 .tag-heading {
     font-weight: 500;
     font-size: 14px;
@@ -153,6 +161,7 @@
     border: solid 1px #4167b2;
     padding: 5px 25px;
     border-radius: 12.5px;
+    cursor: pointer;
 }
 .share-fb:before {
 	content: '\f09a';
@@ -166,8 +175,8 @@
 }
 
 
-.thumb-video {
-	/*position: relative;*/
+.thumb-video:hover {
+	opacity: 0.8;
 }
 .thumb-video img {
 	width: 100%;
@@ -233,25 +242,25 @@
     border-bottom: 1px solid #9b9b9b;
 }
 .menu-video {
-    height: auto;
+    height: 0;
     width: 250px;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: 62px;
     right: 0;
-    display: none;
     overflow-y: hidden;
-
-/*    transition: height 0.5s;
+    transition: height 0.5s;
     -o-transition: height 0.5s;
     -ms-transition: height 0.5s;
     -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
-*/
     background: #ffffff;
+    border-top: 3px solid #333333;
+}
+.menu-video.active {
     border-top: 3px solid #ed1c24;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px;   
+    z-index: 1;
 }
 .menu-video a {
     display: block;
@@ -270,6 +279,9 @@
     -moz-transition: width 0.3s;
     */
 }
+.menu-video a:hover {
+    color: #ed1c24;
+}
 .menu-video a.active {
     border-left: 3px solid #ed1c24;
 }
@@ -282,6 +294,26 @@
     content: '\f107';
     font-size: 20px;
     margin-left: 15px;
+}
+.input-search-video {
+    height: 25px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 12.5px;
+    color: #333333;
+    font-size: 13px;
+    padding: 0 10px;
+    margin-right: 25px;
+    border: solid 1px #cbcbcb;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.open-menu {
+    position: absolute;
+    right: 0px;
+    top: 20px;
 }
 
 /*==================================================

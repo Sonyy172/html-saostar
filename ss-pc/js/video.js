@@ -46,19 +46,22 @@ $(document).click(function(event){
     if ($(event.target).is('.open-menu')) {
         openNav();
     }
+    if ($(event.target).is('.open-menu') && ( $("#menu-video").css('height') != '0px')) {
+        closeNav();
+    }
 });
 
 
 
 
 function openNav() {
-
-    $('.menu-video').slideDown('fast', 'swing');
-    console.log('open nav');
+    document.getElementById('menu-video').setAttribute("style","height:635px");
+    document.getElementById("menu-video").classList.add("active");
+    document.getElementById("img-nav-menu").src = "images/video/close_ico.svg";
 }
 
 function closeNav() {
-
-    $('.menu-video').slideUp('fast', 'swing');
-    console.log('close nav');
+    document.getElementById('menu-video').setAttribute("style","height: 0px");
+    document.getElementById("menu-video").classList.remove("active");   
+    document.getElementById("img-nav-menu").src = "images/video/list_ico.svg";
 }
